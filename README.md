@@ -43,7 +43,7 @@ Beyond simply running a terminal-based AI, this Supercharged Edition leverages S
 
 # Installation
 
-You can install this using either a PC (Fastest/Fully Automatic) or directly on the Phone. You will need an OpenRouter API Key: (https://openrouter.ai/)
+You can install this using either a PC (Fastest/Fully Automatic) or directly on the Phone. You will need an OpenRouter API Key: https://openrouter.ai/
 
 # Option 1: Using a PC
 
@@ -71,14 +71,17 @@ This method automates the entire process including APK installation, permission 
 If you don't have a PC, you can configure it entirely on your phone.
 
 1. Install Prerequisites: Download and          install the Termux GitHub release,           Termux:API GitHub Release, and the           Shizuku GitHub release.
+   
    Termux Github release: https://github.com/termux/termux-app/releases
+   
    Termux API GitHub release: https://github.com/termux/termux-api/releases
+   
    Shizuku GitHub release: https://github.com/RikkaApps/Shizuku/releases
-3. Grant Permissions: Go manually to your       Android Settings and grant ALL hardware      permissions to the Termux:API app.
+2. Grant Permissions: Go manually to your       Android Settings and grant ALL hardware      permissions to the Termux:API app.
 
-4. Start Shizuku: Open the Shizuku app, pair    and start it via Wireless Debugging, then    tap Export Files (Exports rish to your       phone's Shizuku folder).
+3. Start Shizuku: Open the Shizuku app, pair    and start it via Wireless Debugging, then    tap Export Files (Exports rish to your       phone's Shizuku folder).
 
-5. Run the Setup Commands: Open Termux and
+4. Run the Setup Commands: Open Termux and
    run the commands below. You can either       run them one by one to understand what       each step does, or paste the entire block    at once at the bottom.
 
 # Step-by-Step (Run One at a Time)
