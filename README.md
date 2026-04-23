@@ -110,9 +110,9 @@ pkg reinstall -y libngtcp2 openssl curl
 
  Step 5: Download the installer scripts from GitHub
 ```
-curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/termux_setup.sh -o ~/termux_setup.sh
-curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/mobile_tools.sh -o ~/scripts/mobile_tools.sh --create-dirs
-curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/setup_shizuku.sh -o ~/setup_shizuku.sh
+curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/termux_setup.sh -o ~/termux_setup.sh
+curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/scripts/mobile_tools.sh -o ~/scripts/mobile_tools.sh --create-dirs
+curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/scripts/setup_shizuku.sh -o ~/setup_shizuku.sh
 chmod +x ~/scripts/mobile_tools.sh ~/setup_shizuku.sh
 ```
 
@@ -120,14 +120,14 @@ chmod +x ~/scripts/mobile_tools.sh ~/setup_shizuku.sh
 ```
 bash ~/setup_shizuku.sh
 ```
-`
+
 
  Step 7: Fix DNS resolution order (prevents IPv6 connection hangs)
 ```
 echo "export NODE_OPTIONS=--dns-result-order=ipv4first" >> ~/.bashrc
 export NODE_OPTIONS=--dns-result-order=ipv4first
 ```
-`
+
 
  Step 8: Run the main installer (installs Node.js, OpenClaude, and sets up the AI)
 ```
@@ -138,7 +138,7 @@ bash ~/termux_setup.sh
 If you're comfortable, paste this entire block to run everything at once:
 
 ```
-termux-setup-storage && sleep 3 && sed -i 's|^\(deb.*\)://[^ ]*/termux-main|\1://packages.termux.dev/apt/termux-main|' $PREFIX/etc/apt/sources.list && pkg update -y && pkg install -y curl && pkg reinstall -y libngtcp2 openssl curl && curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/termux_setup.sh -o ~/termux_setup.sh && curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/mobile_tools.sh -o ~/scripts/mobile_tools.sh --create-dirs && curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/setup_shizuku.sh -o ~/setup_shizuku.sh && chmod +x ~/scripts/mobile_tools.sh ~/setup_shizuku.sh && bash ~/setup_shizuku.sh && echo "export NODE_OPTIONS=--dns-result-order=ipv4first" >> ~/.bashrc && export NODE_OPTIONS=--dns-result-order=ipv4first && bash ~/termux_setup.sh
+termux-setup-storage && sleep 3 && sed -i 's|^\(deb.*\)://[^ ]*/termux-main|\1://packages.termux.dev/apt/termux-main|' $PREFIX/etc/apt/sources.list && pkg update -y && pkg install -y curl && pkg reinstall -y libngtcp2 openssl curl && curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/termux_setup.sh -o ~/termux_setup.sh && curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/scripts/mobile_tools.sh -o ~/scripts/mobile_tools.sh --create-dirs && curl -sL https://raw.githubusercontent.com/cloudaii/Openclaude/main/scripts/setup_shizuku.sh -o ~/setup_shizuku.sh && chmod +x ~/scripts/mobile_tools.sh ~/setup_shizuku.sh && bash ~/setup_shizuku.sh && echo "export NODE_OPTIONS=--dns-result-order=ipv4first" >> ~/.bashrc && export NODE_OPTIONS=--dns-result-order=ipv4first && bash ~/termux_setup.sh
 ```
 
 # How to Launch & Use
