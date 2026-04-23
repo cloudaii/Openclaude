@@ -81,41 +81,51 @@ If you don't have a PC, you can configure it entirely on your phone.
 
 # Step-by-Step (Run One at a Time)
 
-```
+
 # Step 1: Grant Termux access to your phone's storage (tap "Allow" on the popup)
+```
 termux-setup-storage && sleep 3
 ```
-```
+
 # Step 2: Fix package mirror (switches to the official server to avoid download errors)
+```
 sed -i 's|^\(deb.*\)://[^ ]*/termux-main|\1://packages.termux.dev/apt/termux-main|' $PREFIX/etc/apt/sources.list
 ```
-```
+
 # Step 3: Update package lists & install curl
+```
 pkg update -y && pkg install -y curl
 ```
 
-```
+
 # Step 4: Fix SSL/HTTPS libraries (prevents common Termux network crashes)
+```
 pkg reinstall -y libngtcp2 openssl curl
 ```
-```
+
 # Step 5: Download the installer scripts from GitHub
+```
 curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/termux_setup.sh -o ~/termux_setup.sh
 curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/mobile_tools.sh -o ~/scripts/mobile_tools.sh --create-dirs
 curl -sL https://raw.githubusercontent.com/jarvesusaram99/open-claude-code-termux/main/scripts/setup_shizuku.sh -o ~/setup_shizuku.sh
 chmod +x ~/scripts/mobile_tools.sh ~/setup_shizuku.sh
 ```
-```
+
 # Step 6: Configure Shizuku (enables hardware & UI control)
+```
 bash ~/setup_shizuku.sh
 ```
-```
+`
+
 # Step 7: Fix DNS resolution order (prevents IPv6 connection hangs)
+```
 echo "export NODE_OPTIONS=--dns-result-order=ipv4first" >> ~/.bashrc
 export NODE_OPTIONS=--dns-result-order=ipv4first
 ```
-```
+`
+
 # Step 8: Run the main installer (installs Node.js, OpenClaude, and sets up the AI)
+```
 bash ~/termux_setup.sh
 ```
 # All-in-One (Paste the Whole Thing)
